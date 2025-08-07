@@ -1,0 +1,86 @@
+// 帖子数据
+const posts = [
+    { title: "测试贴-你好世界", date: "2025-08-07", tags: ["日常", "网站"], content: "这是一篇测试帖子，发布日期接近于建站日期" },
+    { title: "和朋友去北京ICOS漫展", date: "2025-07-13", tags: ["日常", "漫展"], content: "主要就去漫展找兽兽去了，一天走的好累TAT" }
+];
+
+// === 网站配置对象 ===
+const siteConfig = {
+	// 网站基本信息
+	siteName: "凨狐的小窝",
+	siteSubtitle: "一只兽兽的小窝",
+	currentYear: new Date().getFullYear(),
+	
+	// 用户信息
+	userName: "凨狐皦冰",
+	userAvatar: {
+		type: "image", // 选项: "icon" 或 "image"
+		iconClass: "fas fa-wolf", // 当 type 为 "icon" 时使用
+		imageUrl: "source/sqarenewater.jpg" // 当 type 为 "image" 时使用
+	},
+	userBio: "这个名字...一看就很不想让人搜到 | 热爱动物虚拟形象的人(furrys) | 网站开发",
+	email: "s@mcdr.top",
+	
+	// 社交链接
+	socialLinks: [
+		{ icon: "fas fa-envelope", url: "#" },
+		{ icon: "fab fa-qq", url: "#" },
+		{ icon: "fab fa-internet-explorer", url: "#" },
+		{ icon: "fab fa-weixin", url: "#" }
+	],
+	
+	// 页脚信息
+	footer: {
+		line1: "© {{year}} {{siteName}} | {{subtitle}}",
+		line2: "部署于 Cloudflare Workers & Pages"
+	},
+	
+	// 关于页面内容
+	aboutContent: [
+		"这是兽兽的小窝",
+		"欢迎加入我们的Q群",
+		"欢迎来北京线下兽聚及漫展捕捉，后续会开通预告",
+		"如果你有任何建议或想法，欢迎通过我的联系页面与站长沟通，我会仔细查看每个建议"
+	],
+	
+	// 其他元数据
+	metaDescription: "凨狐的小窝"
+};
+
+// 在data.js底部添加DOMContentLoaded事件
+document.addEventListener('DOMContentLoaded', function() {
+    // ===== 主要配置更新 =====
+    
+    // 1. 导航栏网站名称
+    document.querySelector('#siteNameNav').textContent = siteConfig.siteName;
+    
+    // 2. 用户头像处理
+    const userAvatar = document.getElementById('userAvatar');
+    if (siteConfig.userAvatar.type === 'icon') {
+        userAvatar.innerHTML = `<i class="${siteConfig.userAvatar.iconClass}"></i>`;
+    } else if (siteConfig.userAvatar.imageUrl) {
+        userAvatar.innerHTML = `<img src="${siteConfig.userAvatar.imageUrl}" alt="头像">`;
+    }
+    
+    // 3. 用户名和描述
+    document.getElementById('userName').textContent = siteConfig.userName;
+    document.getElementById('userBio').textContent = siteConfig.userBio;
+    
+    // 4. 页脚内容
+    const footer = siteConfig.footer;
+    document.getElementById('footerContent').innerHTML = `
+        <p>${footer.line1
+            .replace('{{year}}', siteConfig.currentYear)
+            .replace('{{siteName}}', siteConfig.siteName)
+            .replace('{{subtitle}}', siteConfig.siteSubtitle)}
+        </p>
+        <p>${footer.line2}</p>
+    `;
+    
+    // 5. 关于页面内容
+    document.getElementById('aboutContent').innerHTML = 
+        siteConfig.aboutContent.map(p => `<p>${p}</p>`).join('');
+    
+    // 6. 网站标题
+    document.title = `${siteConfig.siteName} - ${siteConfig.siteSubtitle}`;
+});
