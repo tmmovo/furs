@@ -1,7 +1,8 @@
 // 帖子数据
 const posts = [
     { title: "测试贴-你好世界", date: "2025-08-07", tags: ["日常", "网站"], content: "这是一篇测试帖子，发布日期接近于建站日期" },
-    { title: "和朋友去北京ICOS漫展", date: "2025-07-13", tags: ["日常", "漫展"], content: "主要就去漫展找兽兽去了，一天走的好累TAT" }
+    { title: "和朋友去北京ICOS漫展", date: "2025-07-13", tags: ["日常", "漫展"], content: "主要就去漫展找兽兽去了，一天走的好累TAT" },
+	{ title: "更新线下捕捉页", date: "2025-08-08", tags: ["网站"], content: "更新了漫展或兽聚捕捉，<span><a href=`https://扩列.我爱你`>点此进入</a></span>，在关于页也有入口" }
 ];
 
 // === 网站配置对象 ===
@@ -46,6 +47,7 @@ const siteConfig = {
 	// 其他元数据
 	metaDescription: "凨狐的小窝"
 };
+
 
 // 在data.js底部添加DOMContentLoaded事件
 document.addEventListener('DOMContentLoaded', function() {
