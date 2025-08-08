@@ -41,7 +41,7 @@ const siteConfig = {
 	aboutContent: [
 		"这是兽兽的小窝",
 		"欢迎加入我们的Q群",
-		"欢迎来北京线下兽聚及漫展捕捉，后续会开通预告",
+		"欢迎来北京线下兽聚及漫展捕捉，<span><a href='https://扩列.我爱你'>点此打开</a></span>",
 		"如果你有任何建议或想法，欢迎通过我的联系页面与站长沟通，我会仔细查看每个建议"
 	],
 	
@@ -87,4 +87,5 @@ document.addEventListener('DOMContentLoaded', function() {
     // 6. 网站标题
     document.title = `${siteConfig.siteName} - ${siteConfig.siteSubtitle}`;
 });
+
 
