@@ -2,7 +2,8 @@
 const posts = [
     { title: "测试贴-你好世界", date: "2025-08-07", tags: ["日常", "网站"], content: "这是一篇测试帖子，发布日期接近于建站日期" },
     { title: "和朋友去北京ICOS漫展", date: "2025-07-13", tags: ["日常", "漫展"], content: "主要就去漫展找兽兽去了，一天走的好累TAT" },
-	{ title: "更新线下捕捉页", date: "2025-08-08", tags: ["网站"], content: "更新了漫展或兽聚捕捉，<span><a href=`https://扩列.我爱你`>点此进入</a></span>，在关于页也有入口" }
+	{ title: "更新线下捕捉页", date: "2025-08-08", tags: ["网站"], content: "更新了漫展或兽聚捕捉，<span><a href=`https://扩列.我爱你`>点此进入</a></span>，在关于页也有入口" },
+	{ title: "修复bug", date: "2025-08-08", tags: ["网站"], content: "修复一个无法查看帖子详情的问题，原因是关于页的section没加闭合标签，有其他bug可以来<span><a href='https://github.com/tmmovo/furs'>https://github.com/tmmovo/furs</a></span>提交哦" }
 ];
 
 // === 网站配置对象 ===
@@ -86,3 +87,4 @@ document.addEventListener('DOMContentLoaded', function() {
     // 6. 网站标题
     document.title = `${siteConfig.siteName} - ${siteConfig.siteSubtitle}`;
 });
+
