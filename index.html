@@ -598,6 +598,32 @@
 		.contact-notes p {
 		    margin: 12px 0;
 		}
+		
+		.welcome-info {
+		    display: flex;
+		    align-items: center;
+		    gap: 15px;
+		    color: var(--text-color);
+		    font-size: 0.95rem;
+		    margin: 0 15px;
+		}
+		
+		.info-label {
+		    font-weight: 500;
+		}
+		
+		.info-value {
+		    color: var(--accent-color);
+		    font-weight: 600;
+		}
+		
+		/* 确保在小屏幕上也能正确显示 */
+		@media (max-width: 768px) {
+		    .welcome-info {
+		        flex-wrap: wrap;
+		        gap: 8px;
+		    }
+		}
     </style>
 </head>
 <body>
@@ -1106,4 +1132,5 @@
     </script>
 </body>
 </html>
+
 
