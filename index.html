@@ -652,6 +652,13 @@
                             <input type="text" id="searchInput" placeholder="搜索帖子...">
                             <i class="fas fa-search"></i>
                         </div>
+						
+						<!-- ip对应欢迎语 -->
+						<div class="welcome-info">
+						    <div id="welcome-text">欢迎哦！</div>
+						    <div class="info-label">您的地理位置：</div>
+						    <div id="location" class="info-value">未知</div>
+						</div>
                         
                         <div class="filters">
                             <select id="sortFilter">
@@ -740,6 +747,7 @@
         </footer>
     </div>
     <script src="source/data.js"></script>
+    <script src="source/ips.js"></script>
     <script>
 		// 从外部JSON文件加载数据到常量posts
 		// const loadPosts = async () => {
@@ -1098,3 +1106,4 @@
     </script>
 </body>
 </html>
+
