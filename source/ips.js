@@ -39,7 +39,7 @@ async function getIPInfo() {
             } else {
                 // 国外IP
                 const country = data.adcode.p;
-                greeting = `${country} `;
+                greeting = greetingsMap[country];
             }
             
             // 显示欢迎语
@@ -53,4 +53,5 @@ async function getIPInfo() {
 }
         
 // 页面加载时获取IP信息
+
 window.addEventListener('DOMContentLoaded', getIPInfo);
