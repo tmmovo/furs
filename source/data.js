@@ -18,7 +18,7 @@ const siteConfig = {
 	userAvatar: {
 		type: "image", // 选项: "icon" 或 "image"
 		iconClass: "fas fa-wolf", // 当 type 为 "icon" 时使用
-		imageUrl: "source/sqarenewater.jpg" // 当 type 为 "image" 时使用
+		imageUrl: "https://cdn.fis.ink/cdn/2025/08/10/6898552d1089d.webp" // 当 type 为 "image" 时使用
 	},
 	userBio: "这个名字...一看就很不想让人搜到 | 热爱动物虚拟形象的人(furrys) | 网站开发",
 	email: "s@mcdr.top",
@@ -87,6 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 6. 网站标题
     document.title = `${siteConfig.siteName} - ${siteConfig.siteSubtitle}`;
 });
+
 
 
 
