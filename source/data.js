@@ -49,6 +49,20 @@ const siteConfig = {
 	metaDescription: "凨狐的小窝"
 };
 
+const friends = [
+    {
+        Title: "Fishcpy的小破站",
+        Describe: "非淡泊无以明志，非宁静无以致远",
+        Url: "https://blog.fis.ink/",
+        Image: "https://www.fis.ink/img/logo_c.png"
+    }
+];
+
+const infoText = `请按以下步骤添加友情链接：
+	1. 通过QQ或邮件通知我们
+	2. 将本站添加到您的网站
+	3. 发送您的网站名称、URL和描述`;
+
 
 // 在data.js底部添加DOMContentLoaded事件
 document.addEventListener('DOMContentLoaded', function() {
@@ -87,6 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 6. 网站标题
     document.title = `${siteConfig.siteName} - ${siteConfig.siteSubtitle}`;
 });
+
 
 
 
