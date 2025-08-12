@@ -54,7 +54,7 @@ const friends = [
         Title: "线下捕捉(本站)",
         Describe: "漫展兽聚线下捕捉看这里哦",
         Url: "https://扩列.我爱你/",
-        Image: "https://ui-avatars.com/api/?name=扩&background=0081ff&color=ff3333&rounded=true"
+        Image: "https://ui-avatars.com/api/?name=扩&background=ff3333&color=ffffff&rounded=true"
     },
 	{
         Title: "Fishcpy的小破站",
@@ -107,6 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 6. 网站标题
     document.title = `${siteConfig.siteName} - ${siteConfig.siteSubtitle}`;
 });
+
 
 
 
