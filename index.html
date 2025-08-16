@@ -769,7 +769,7 @@
         </section>
         
         <footer class="footer">
-            <div id="footerContent">获取中 Footer</div>
+            <div id="footerContent">获取中... 首次访问可能加载时间较长，如10秒钟过去还无响应可以尝试<a onclick='refreshed()'>刷新</a>或检查网络和代理</div>
         </footer>
     </div>
     <script src="source/data.js"></script>
@@ -802,6 +802,11 @@
         
 		function noticed(text){
 			alert(text);
+			return 0;
+		}
+		
+		function refreshed(){
+			location.reload();
 			return 0;
 		}
 		
@@ -1132,6 +1137,7 @@
     </script>
 </body>
 </html>
+
 
 
 
