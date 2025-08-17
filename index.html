@@ -1002,11 +1002,10 @@
                 const startIndex = (currentPage - 1) * postsPerPage;
                 const endIndex = startIndex + postsPerPage;
                 const postsToShow = filteredPosts.slice(startIndex, endIndex);
-
-				const tagRemove = stripHtmlTags(post.content);
 				
                 let html = '';
                 postsToShow.forEach(post => {
+					const tagRemove = stripHtmlTags(post.content);
                     html += `
                         <div class="post-card" data-id="${post.id}">
                             <div class="content">
@@ -1157,6 +1156,7 @@
     </script>
 </body>
 </html>
+
 
 
 
