@@ -12,7 +12,7 @@ const posts = [
 const siteConfig = {
 	// 网站基本信息
 	siteName: "凨狐的小窝",
-	siteSubtitle: "一只兽兽的小窝",
+	siteSubtitle: "凨狐的小窝",
 	currentYear: new Date().getFullYear(),
 	
 	// 用户信息
@@ -109,6 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 6. 网站标题
     document.title = `${siteConfig.siteName} - ${siteConfig.siteSubtitle}`;
 });
+
 
 
 
