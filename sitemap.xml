@@ -8,4 +8,10 @@
        <changefreq>daily</changefreq>
        <priority>1.0000</priority>
   </url>
+  <url>
+       <loc>https://fur.tax/friends</loc>
+       <lastmod>2025-08-11T03:13:32+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>1.0000</priority>
+  </url>
 </urlset>
