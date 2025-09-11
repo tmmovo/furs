@@ -10,6 +10,20 @@
 	<meta name="baidu-site-verification" content="codeva-hm52AQKW6w" />
 	<meta name="360-site-verification" content="5225f9ca3935387251efbc274705b478" />
 	<h1 style="display: none;">欢迎来到凨狐的小窝啦，欢迎加入我们的聊天群哦，可以在线下兽聚或漫展见面哦</h1>	
+	<!-- 方法1: IE条件注释 + meta刷新 - 最可靠的方法 -->
+    <!--[if IE]>
+    <meta http-equiv="refresh" content="0;url=IETip.html">
+    <![endif]-->
+    
+    <!-- 方法2: 针对IE6-8的额外保障 -->
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;url=IETip.html">
+    <![endif]-->
+    
+    <!-- 方法3: 针对IE9-11的额外保障 -->
+    <!--[if gte IE 9]>
+    <meta http-equiv="refresh" content="0;url=IETip.html">
+    <![endif]-->
     <style>
         * {
             margin: 0;
@@ -637,6 +651,64 @@
     </style>
 </head>
 <body>
+	<!-- 方法4: noscript备用方案 - 当JavaScript被禁用时 -->
+    <noscript>
+        <div class="ie-fallback">
+            <h2>检测到您可能使用的是IE浏览器</h2>
+            <p>为了获得更好的浏览体验，请等待稍后跳转：</p>
+            <p><a href="IETip.html">手动跳转</a></p>
+        </div>
+        <meta http-equiv="refresh" content="3;url=IETip.html">
+    </noscript>
+	<script>
+        // 方法5: JavaScript检测 - 作为现代浏览器的处理方案
+        (function() {
+            var userAgent = navigator.userAgent || '';
+            var isIE = false;
+            
+            // 检测IE的多种方法
+            if (userAgent.indexOf('MSIE') > -1 || 
+                userAgent.indexOf('Trident') > -1 || 
+                userAgent.indexOf('Edge/') > -1 ||
+                document.documentMode ||
+                window.StyleMedia) {
+                isIE = true;
+            }
+            
+            // 额外的IE检测方法
+            try {
+                if (window.ActiveXObject || 'ActiveXObject' in window) {
+                    isIE = true;
+                }
+            } catch(e) {}
+            
+            if (isIE) {
+                // IE浏览器 - 立即跳转
+                window.location.replace('IETip.html');
+            } else {
+                // 现代浏览器 - 显示正常内容
+                setTimeout(function() {
+                    document.body.innerHTML = 
+                        '<div class="modern-content">' +
+                        '<h1>欢迎访问凨狐的小窝！</h1>' +
+                        '<p>您使用的是现代浏览器，页面正常显示。</p>' +
+                        '<p>这里可以放置您的正常网站内容。</p>' +
+                        '<p>如果您需要跳转到其他页面，请修改此页面的代码。</p>' +
+                        '</div>';
+                }, 500);
+            }
+        })();
+    </script>
+
+    <!-- 方法6: IE条件注释中的JavaScript备用 -->
+    <!--[if IE]>
+    <script>
+        // 如果前面的meta刷新没有生效，这里再次尝试跳转
+        setTimeout(function() {
+            window.location.replace('IETip.html');
+        }, 1000);
+    </script>
+    <![endif]-->
     <!-- 导航栏 -->
     <nav class="navbar">
 		<a href="#" class="logo">
@@ -1161,6 +1233,7 @@
     </script>
 </body>
 </html>
+
 
 
 
