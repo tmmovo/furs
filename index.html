@@ -685,17 +685,6 @@
             if (isIE) {
                 // IE浏览器 - 立即跳转
                 window.location.replace('IETip.html');
-            } else {
-                // 现代浏览器 - 显示正常内容
-                setTimeout(function() {
-                    document.body.innerHTML = 
-                        '<div class="modern-content">' +
-                        '<h1>欢迎访问凨狐的小窝！</h1>' +
-                        '<p>您使用的是现代浏览器，页面正常显示。</p>' +
-                        '<p>这里可以放置您的正常网站内容。</p>' +
-                        '<p>如果您需要跳转到其他页面，请修改此页面的代码。</p>' +
-                        '</div>';
-                }, 500);
             }
         })();
     </script>
@@ -1233,6 +1222,7 @@
     </script>
 </body>
 </html>
+
 
 
 
