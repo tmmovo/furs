@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Bilibili浏览器升级提示</title>
+    <!-- 引入iconfont图标库 - 使用更稳定的CDN源 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        /* 基础样式 - 兼容全版本IE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff;
+            color: #333;
+            text-align: center;
+            line-height: 1.6;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        /* 灰色细横线样式 */
+        .divider {
+            height: 1px;
+            background-color: #e0e0e0;
+            margin: 20px 0;
+            width: 100%;
+            position: relative;
+        }
+        /* 居中文本在横线上方 */
+        .divider-text {
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+            padding: 0 15px;
+            font-size: 16px;
+            color: #333;
+        }
+        /* 标题样式 */
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ff7694;
+            margin: 15px 0;
+        }
+        /* 描述文本样式 */
+        .description {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+            margin: 15px 0 25px;
+        }
+        /* 链接样式 */
+        .link {
+            color: #ff7694;
+            text-decoration: none;
+        }
+        /* 下载按钮样式 */
+        .download-btn {
+            background-color: #ff7694;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 15px 0 25px;
+            display: inline-block;
+        }
+        /* 浏览器选项样式 */
+        .browsers {
+            display: inline-block;
+            margin: 15px 0 25px;
+        }
+        .browser {
+            display: inline-block;
+            margin: 0 10px;
+            text-align: center;
+        }
+        .browser-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            margin: 0 auto 8px;
+            line-height: 50px;
+            font-size: 24px;
+            color: #666;
+            font-family: "Font Awesome 6 Free", "FontAwesome", Arial, sans-serif;
+            font-weight: 900;
+            text-align: center;
+            display: block;
+        }
+        
+        /* 备用图标样式 - 当字体图标加载失败时使用 */
+        .browser-icon.fallback {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        .chrome .browser-icon {
+            color: #4285f4;
+        }
+        .firefox .browser-icon {
+            color: #ff7139;
+        }
+        .edge .browser-icon {
+            color: #0078d7;
+        }
+        .opera .browser-icon {
+            color: #ff1b2d;
+        }
+        .browser-name {
+            font-size: 12px;
+            color: #666;
+        }
+        
+        /* 浏览器链接样式 */
+        .browser-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            cursor: pointer;
+        }
+        
+        .browser-link:hover {
+            text-decoration: none;
+        }
+        
+        .browser-link:hover .browser-icon {
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+        
+        .browser-link:hover .browser-name {
+            color: #333;
+        }
+        /* 版权信息样式 */
+        .copyright {
+            font-size: 12px;
+            color: #999;
+            margin-top: 25px;
+        }
+        
+        /* IE兼容性样式 */
+        .ie-compat {
+            zoom: 1;
+        }
+    </style>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <style>
+        /* IE8及以下版本的特殊样式 */
+        .divider-text {
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            margin-left: -50px;
+            width: 100px;
+        }
+        .browser-icon {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+    <![endif]-->
+    <!--[if IE]>
+    <style>
+        /* 所有IE版本的兼容样式 */
+        .browser-icon {
+            zoom: 1;
+        }
+        .browser-link {
+            display: block;
+            text-decoration: none;
+        }
+        .browser-link:hover {
+            text-decoration: none;
+        }
+    </style>
+    <![endif]-->
+</head>
+<body>
+    <div class="container">
+        <div class="divider"></div>
+        
+        <!-- 标题显示在横线上方 -->
+        <h1>凨狐的小窝</h1>
+        
+        <div class="divider">
+            <span class="divider-text">您的浏览器版本过低哦</span>
+        </div>
+        
+        <p class="description">
+            亲爱的人类，您当前使用的浏览器版本过低，已无法正常访问此页面。您可以通过 <a href="#" class="link">升级浏览器</a> 或 <a href="#" class="link">使用智能手机</a> 继续访问，感谢您的支持与陪伴～
+        </p>
+        
+        <div class="divider">
+            <span class="divider-text">升级您的浏览器</span>
+        </div>
+        
+        <div class="browsers">
+            <div class="browser chrome">
+                <a href="https://www.google.cn/intl/zh-CN/chrome" target="_blank" class="browser-link">
+                    <div class="browser-icon">&#xf268;</div>
+                    <div class="browser-name">Chrome<br>谷歌浏览器</div>
+                </a>
+            </div>
+            <div class="browser firefox">
+                <a href="https://www.mozilla.org/zh-CN/firefox/new" target="_blank" class="browser-link">
+                    <div class="browser-icon">&#xf269;</div>
+                    <div class="browser-name">Firefox<br>火狐浏览器</div>
+                </a>
+            </div>
+            <div class="browser edge">
+                <a href="https://www.microsoftedgeinsider.com" target="_blank" class="browser-link">
+                    <div class="browser-icon">&#xf282;</div>
+                    <div class="browser-name">Edge<br>微软浏览器</div>
+                </a>
+            </div>
+            <div class="browser opera">
+                <a href="https://www.opera.com/zh-cn" target="_blank" class="browser-link">
+                    <div class="browser-icon">&#xf26a;</div>
+                    <div class="browser-name">Opera<br>欧朋浏览器</div>
+                </a>
+            </div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="copyright">
+            2025 凨狐的小窝
+        </div>
+    </div>
+    
+    <script>
+        // 检测字体图标是否加载成功，如果失败则使用备用图标
+        function checkIconFont() {
+            var icons = document.querySelectorAll ? document.querySelectorAll('.browser-icon') : 
+                       document.getElementsByClassName ? document.getElementsByClassName('browser-icon') : [];
+            var fallbackIcons = ['C', 'F', 'E', 'O'];
+            
+            // 延迟检查，给字体图标加载时间
+            setTimeout(function() {
+                for (var i = 0; i < icons.length; i++) {
+                    var icon = icons[i];
+                    var computedStyle = window.getComputedStyle ? window.getComputedStyle(icon) : 
+                                       icon.currentStyle ? icon.currentStyle : null;
+                    
+                    // 检查字体是否加载成功
+                    var fontLoaded = false;
+                    if (computedStyle) {
+                        var fontFamily = computedStyle.fontFamily || computedStyle['font-family'];
+                        fontLoaded = fontFamily && (fontFamily.indexOf('Font Awesome') !== -1 || fontFamily.indexOf('FontAwesome') !== -1);
+                    }
+                    
+                    // 如果字体图标没有加载成功，使用备用图标
+                    if (!fontLoaded) {
+                        icon.className = icon.className + ' fallback';
+                        icon.innerHTML = fallbackIcons[i];
+                    }
+                }
+            }, 2000);
+        }
+        
+        // 兼容IE的事件监听
+        function addLoadEvent(func) {
+            var oldonload = window.onload;
+            if (typeof window.onload != 'function') {
+                window.onload = func;
+            } else {
+                window.onload = function() {
+                    if (oldonload) {
+                        oldonload();
+                    }
+                    func();
+                };
+            }
+        }
+        
+        // 页面加载完成后检查
+        if (document.addEventListener) {
+            document.addEventListener('DOMContentLoaded', checkIconFont);
+        } else if (document.attachEvent) {
+            document.attachEvent('onreadystatechange', function() {
+                if (document.readyState === 'complete') {
+                    checkIconFont();
+                }
+            });
+        }
+        
+        // 备用方案
+        addLoadEvent(checkIconFont);
+    </script>
+</body>
+</html>
