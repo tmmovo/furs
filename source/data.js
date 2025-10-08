@@ -3,7 +3,6 @@ const posts = [
     { title: "测试贴-你好世界", date: "2025-08-07", tags: ["日常", "网站"], content: "这是一篇测试帖子，发布日期接近于建站日期" },
     { title: "和朋友去北京ICOS漫展", date: "2025-07-13", tags: ["日常", "漫展"], content: "主要就去漫展找兽兽去了，一天走的好累TAT" },
 	{ title: "更新线下捕捉页", date: "2025-08-08", tags: ["网站"], content: "更新了漫展或兽聚捕捉，<span><a target='_blank' href='https://扩列.我爱你'>点此进入</a></span>，在关于页也有入口" },
-	{ title: "修复bug", date: "2025-08-08", tags: ["网站"], content: "修复一个无法查看帖子详情的问题，原因是关于页的section没加闭合标签，有其他bug可以来<span><a target='_blank' href='https://github.com/tmmovo/furs'>https://github.com/tmmovo/furs</a></span>提交哦" },
 	{ title: "爪子到了哦", date: "2025-08-15", tags: ["日常", "兽装"], content: "下午兽装的爪子到了，具体<a target='_blank' href='https://b23.tv/BV1NhbpzaEz2/'>拆箱视频在这里</a>，可以点击查看哦" },
 	{ title: "评价一下非人哉IP的第一部电影《非人哉：限时玩家》", date: "2025-08-16", tags: ["日常"], content: "包含少量剧透！⚠️⚠️⚠️</br>仅代表个人观点，请勿过分解读⚠️⚠️⚠️</br>总体评分可以是<strong>3/5</strong>分</br>到最后能感觉到目的性特别强，感觉影片被纪念小白带偏，如果能去参加首映礼应该还不错，中间真就“详略得当”，跳过了很多内容</br>画面表现力不错，但建模和场景素材的融合度欠佳，中间人物与3d场景模型背景有明显割裂感，影响整体观感，剧情过于老套</br>后面的彩蛋只是在那放<a target='_blank' href='https://music.163.com/#/album?id=281267432'>歌</a>，咱就是说<a target='_blank' href='https://music.163.com/#/album?id=281267432'>歌</a>必须要播那么多遍吗</br>可能是团队真的没有精力去制作更好的电影，但是也是<a target='_blank' href='https://baike.baidu.com/item/%E9%9D%9E%E4%BA%BA%E5%93%89/19626160'>这个IP</a>的第一个电影，五月份<a target='_blank' href='http://www.fen-z.com/'>分子互动</a>成立了分子影业，希望后面能有更好的电影哦</br>问下有没有人知道<a target='_blank' href='https://weibo.com/n/%E9%9D%B4%E4%B8%8B%E7%8C%AB%E8%85%B0%E5%AD%90'>靴猫老师</a>也在后面的鸣谢里，<a onclick='noticed('暂无该角色信息')'>小黑</a>说他永远15岁让我想到了<a target='_blank' href='https://baike.baidu.com/item/%E6%B4%9B%E5%A4%A9%E4%BE%9D/6753346'>洛天依</a>老师...</br>仅代表个人观点，请勿过分解读⚠️⚠️⚠️" }
 ];
@@ -109,6 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 6. 网站标题
     document.title = `${siteConfig.siteName} - ${siteConfig.siteSubtitle}`;
 });
+
 
 
 
